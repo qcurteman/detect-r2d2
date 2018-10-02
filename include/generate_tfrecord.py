@@ -2,10 +2,10 @@
 Usage:
   # From tensorflow/models/
   # Create train data:
-  python3 generate_tfrecord.py --csv_input=data/train_labels.csv  --output_path=train.record
+  python generate_tfrecord.py --csv_input=train_labels.csv  --output_path=../data/train.record
 
   # Create test data:
-  python3 generate_tfrecord.py --csv_input=data/eval_labels.csv  --output_path=eval.record
+  python generate_tfrecord.py --csv_input=eval_labels.csv  --output_path=../data/eval.record
 """
 from __future__ import division
 from __future__ import print_function
@@ -19,7 +19,7 @@ import tensorflow as tf
 from PIL import Image
 from object_detection.utils import dataset_util
 from collections import namedtuple, OrderedDict
-from common import common # Q addition
+from include.common import common # Q addition
 
 flags = tf.app.flags
 flags.DEFINE_string('csv_input', '', 'Path to the CSV input')
@@ -82,17 +82,23 @@ def create_tf_example(group, path):
     return tf_example
 
 
-def main(_):
-    writer = tf.python_io.TFRecordWriter(FLAGS.output_path)
-    path = os.path.join(os.getcwd(), 'images')
-    examples = pd.read_csv(FLAGS.csv_input)
+def main(csv_input, output_path):
+    # csv_input = 'train_labels.csv'
+    # output_path = '../data/train.record'
+
+    print('current directory: ', os.getcwd())
+
+    writer = tf.python_io.TFRecordWriter(output_path)
+    # os.chdir("../data") # now in /data
+    path = os.path.join(os.getcwd(), 'data/images') 
+    examples = pd.read_csv(csv_input)
     grouped = split(examples, 'filename')
     for group in grouped:
         tf_example = create_tf_example(group, path)
         writer.write(tf_example.SerializeToString())
 
     writer.close()
-    output_path = os.path.join(os.getcwd(), FLAGS.output_path)
+    output_path = os.path.join(os.getcwd(), output_path)
     print('Successfully created the TFRecords: {}'.format(output_path))
 
 

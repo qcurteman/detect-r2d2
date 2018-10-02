@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images(r2d2)</folder>
+	<filename>img52.jpg</filename>
+	<path>/home/qcurteman/Desktop/images(r2d2)/img52.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>752</width>
+		<height>564</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>r2d2</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>232</xmin>
+			<ymin>57</ymin>
+			<xmax>544</xmax>
+			<ymax>510</ymax>
+		</bndbox>
+	</object>
+</annotation>
