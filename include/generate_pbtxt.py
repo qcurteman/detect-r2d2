@@ -13,7 +13,7 @@ def create_file():
 
 def generate(filepath):
     custom_label_map = open(filepath, "w+")
-    label_map_string = "item{\n  id: %d\n  name: '%s'\n}\n" % (1, common.model_name)
+    label_map_string = "item {\n  id: %d\n  name: '%s'\n}\n" % (1, common.model_name)
     custom_label_map.write(label_map_string)
     custom_label_map.close()
 

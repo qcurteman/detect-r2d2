@@ -86,7 +86,7 @@ def main(csv_input, output_path):
     # csv_input = 'train_labels.csv'
     # output_path = '../data/train.record'
 
-    print('current directory: ', os.getcwd())
+    # print('current directory: ', os.getcwd())
 
     writer = tf.python_io.TFRecordWriter(output_path)
     # os.chdir("../data") # now in /data
