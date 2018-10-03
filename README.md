@@ -11,6 +11,6 @@ python object_detection/model_main.py --pipeline_config_path="C:\tensorflow1\mod
 To view it: 
 
 from "/models/research/"
-tensorboard --logdir="C:\tensorflow1\models\research\object_detection\detect-r2d2\models\model" --host localhost --port 8088
+tensorboard --logdir="C:\tensorflow1\models\research\object_detection\detect-r2d2\models\model\training" --host localhost --port 8088
 
 Then go to http://localhost:8088
