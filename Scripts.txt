@@ -3,7 +3,7 @@ python object_detection/model_main.py --pipeline_config_path="C:\tensorflow1\mod
 
 tensorboard --logdir="C:\tensorflow1\models\research\object_detection\detect-r2d2\models\model" --host localhost --port 8088
 
-python object_detection/export_inference_graph.py --input_type="image_tensor" --pipeline_config_path="C:\tensorflow1\models\research\object_detection\detect-r2d2\models\model\training\pipeline.config" --trained_checkpoint_prefix="C:\tensorflow1\models\research\object_detection\detect-r2d2\models\model\training\model.ckpt-0" --output_directory="C:\tensorflow1\models\research\object_detection\detect-r2d2\models\model\trained_model_export"
+python object_detection/export_inference_graph.py --input_type="image_tensor" --pipeline_config_path="C:\tensorflow1\models\research\object_detection\detect-r2d2\models\model\embedded_ssd_mobilenet_v1_coco.config" --trained_checkpoint_prefix="C:\tensorflow1\models\research\object_detection\detect-r2d2\models\model\training\model.ckpt-0" --output_directory="C:\tensorflow1\models\research\object_detection\detect-r2d2\models\model\trained_model_export"
 
 ./bonnet_model_compiler.par --frozen_graph_path=frozen_inference_graph.pb --output_graph_path=customized_detector.binaryproto --input_tensor_name="Preprocessor/sub" --output_tensor_names="concat,concat_1" --input_tensor_size=256 --debug
 
