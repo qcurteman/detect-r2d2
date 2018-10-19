@@ -41,6 +41,7 @@ Thumbs.db
 *.pyc
 __pycache__
 .vscode
+.record
 
 # Specific file paths #
 #######################
