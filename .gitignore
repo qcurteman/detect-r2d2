@@ -36,6 +36,12 @@
 ehthumbs.db
 Thumbs.db
 
+# General ignore #
+##################
+*.pyc
+__pycache__
+.vscode
+
 # Specific file paths #
 #######################
 models/model/training
