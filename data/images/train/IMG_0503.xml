@@ -1,0 +1,26 @@
+<annotation>
+	<folder>jpgs</folder>
+	<filename>IMG_0503.jpg</filename>
+	<path>E:\SeniorProject\extra_pictures\Extra Pics-20181018T232656Z-001\Extra Pics\jpgs\IMG_0503.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4032</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>r2d2</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1718</xmin>
+			<ymin>1125</ymin>
+			<xmax>2288</xmax>
+			<ymax>2103</ymax>
+		</bndbox>
+	</object>
+</annotation>
